@@ -60,6 +60,8 @@ services:
         env_file: docker/patroni.env
         hostname: patroni1
         container_name: demo-patroni1
+        ports:
+            - "10018:8008"
         environment:
             <<: *haproxy_env
             PATRONI_NAME: patroni1
@@ -70,6 +72,8 @@ services:
         env_file: docker/patroni.env
         hostname: patroni2
         container_name: demo-patroni2
+        ports:
+            - "10028:8008"        
         environment:
             <<: *haproxy_env
             PATRONI_NAME: patroni2
@@ -80,6 +84,8 @@ services:
         env_file: docker/patroni.env
         hostname: patroni3
         container_name: demo-patroni3
+        ports:
+            - "10038:8008"                
         environment:
             <<: *haproxy_env
             PATRONI_NAME: patroni3
