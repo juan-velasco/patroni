@@ -46,8 +46,8 @@ services:
         hostname: haproxy
         container_name: demo-haproxy
         ports:
-            - "5000:5000"
-            - "5001:5001"
+            - "5010:5000"
+            - "5011:5001"
         command: haproxy
         environment: &haproxy_env
             ETCDCTL_ENDPOINTS: http://etcd1:2379,http://etcd2:2379,http://etcd3:2379
